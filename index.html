@@ -38,19 +38,18 @@
         .hero {
             min-height: 100vh;
             display: grid;
-            grid-template-columns: 1fr 1.35fr;
+            grid-template-columns: 400px 1fr 520px;
             align-items: start;
-            gap: 70px;
-            padding: 60px 5%;
-            max-width: 1480px;
+            gap: 50px;
+            padding: 50px 4% 60px;
+            max-width: 1520px;
             margin: 0 auto;
         }
        
-        /* LEFT COLUMN - Second Book (smaller) */
+        /* LEFT - Second Book */
         .left-column {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
         }
        
         .second-cover-small {
@@ -59,68 +58,65 @@
             height: auto;
             border: 10px solid #111;
             box-shadow: 0 25px 50px -15px rgba(0,0,0,0.85);
-            margin-bottom: 32px;
+            margin-bottom: 28px;
         }
        
         .second-title {
             font-family: 'Playfair Display', serif;
-            font-size: 2.1rem;
+            font-size: 1.95rem;
             font-weight: 700;
             letter-spacing: -1.5px;
             line-height: 1.15;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
        
         .second-subtitle {
-            font-size: 1.05rem;
+            font-size: 1rem;
             font-weight: 500;
             opacity: 0.85;
-            margin-bottom: 22px;
+            margin-bottom: 18px;
         }
        
         .second-teaser {
-            font-size: 0.98rem;
+            font-size: 0.95rem;
             opacity: 0.9;
-            margin-bottom: 28px;
-            line-height: 1.6;
-            max-width: 380px;
+            margin-bottom: 24px;
+            line-height: 1.55;
         }
        
-        /* RIGHT COLUMN - First Book (main) */
-        .right-column {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+        /* MIDDLE - First Book Text */
+        .middle-column {
+            max-width: 560px;
+            padding-top: 20px;
         }
        
         .title {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(2.8rem, 5.5vw, 5.2rem);
+            font-size: clamp(2.6rem, 5vw, 5rem);
             font-weight: 700;
             letter-spacing: -3px;
             line-height: 1.05;
         }
        
         .sigma {
-            font-size: 7.2rem;
-            line-height: 0.75;
-            margin: 12px 0 8px;
+            font-size: 6.8rem;
+            line-height: 0.72;
+            margin: 8px 0 4px;
             display: block;
         }
        
         .subtitle {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: 500;
             opacity: 0.9;
-            margin-bottom: 32px;
+            margin-bottom: 28px;
         }
        
         .teaser {
-            font-size: 1.1rem;
-            max-width: 520px;
+            font-size: 1.05rem;
             opacity: 0.92;
-            margin-bottom: 38px;
-            line-height: 1.65;
+            margin-bottom: 32px;
+            line-height: 1.6;
         }
        
         .download-btn {
@@ -128,19 +124,34 @@
             background: #ffffff;
             color: #000000;
             font-weight: 600;
-            font-size: 1.2rem;
-            padding: 18px 42px;
+            font-size: 1.15rem;
+            padding: 17px 38px;
             border-radius: 9999px;
             text-decoration: none;
             transition: all 0.3s ease;
             box-shadow: 0 10px 30px rgba(255,255,255,0.15);
             white-space: nowrap;
-            margin-top: 10px;
         }
        
         .download-btn:hover {
             transform: translateY(-4px);
             box-shadow: 0 20px 40px rgba(255,255,255,0.25);
+        }
+       
+        /* Second book button - narrower / wrapped */
+        .second-btn {
+            max-width: 310px;
+            font-size: 1rem;
+            padding: 15px 26px;
+            white-space: normal;
+            text-align: center;
+            line-height: 1.35;
+        }
+       
+        /* RIGHT - First Book Cover */
+        .right-column {
+            display: flex;
+            justify-content: flex-end;
         }
        
         .first-cover {
@@ -149,33 +160,38 @@
             height: auto;
             border: 12px solid #111;
             box-shadow: 0 30px 60px -15px rgba(0,0,0,0.9);
-            margin-top: 30px;
         }
        
         .footer {
             text-align: center;
-            padding: 50px 20px 40px;
+            padding: 45px 20px 40px;
             font-size: 0.95rem;
             opacity: 0.6;
             border-top: 1px solid #222;
-            margin-top: 40px;
+            margin-top: 30px;
         }
        
-        @media (max-width: 1100px) {
+        @media (max-width: 1200px) {
+            .hero {
+                grid-template-columns: 1fr 1fr;
+                gap: 45px;
+            }
+            .right-column { justify-content: center; }
+        }
+       
+        @media (max-width: 900px) {
             .hero {
                 grid-template-columns: 1fr;
-                gap: 60px;
-                padding: 40px 5%;
+                padding: 35px 5%;
             }
-            .second-cover-small { max-width: 340px; }
-            .first-cover { max-width: 420px; }
+            .second-cover-small, .first-cover { max-width: 340px; }
         }
     </style>
 </head>
 <body>
     <section class="hero">
         
-        <!-- LEFT: Second Book (smaller, on the left) -->
+        <!-- LEFT: Second Book -->
         <div class="left-column">
             <img src="further-derivations-cover.jpg" 
                  alt="Storm Theory: Further Derivations Book Cover" 
@@ -189,13 +205,13 @@
                 Derives the σ-dependent metric, soft-core black holes, coherence-gradient force law, modified ringdown, and the full Einstein-to-Storm reduction.
             </div>
             
-            <a href="Storm-Theory-Further-Derivations.pdf" class="download-btn" download>
+            <a href="Storm-Theory-Further-Derivations.pdf" class="download-btn second-btn" download>
                 ↓ Download Hudson's Second Book — Storm Theory: Further Derivations — FREE
             </a>
         </div>
         
-        <!-- RIGHT: First Book (main text + image moved to the right) -->
-        <div class="right-column">
+        <!-- MIDDLE: First Book Main Text -->
+        <div class="middle-column">
             <h1 class="title">Storm Theory</h1>
             <span class="sigma">σ</span>
             <p class="subtitle">Coherence, and the End of Singularities<br>A New Foundation for Physics</p>
@@ -210,7 +226,10 @@
             <a href="Storm-Theory.pdf" class="download-btn" download>
                 ↓ Download the full 785-page first edition — FREE
             </a>
-            
+        </div>
+        
+        <!-- RIGHT: First Book Cover (far right) -->
+        <div class="right-column">
             <img src="Cover.jpg" alt="Storm Theory Book Cover" class="first-cover">
         </div>
         
