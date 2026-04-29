@@ -107,68 +107,58 @@
             justify-self: center;
         }
        
-        /* === SECOND BOOK SECTION === */
+        /* SECOND BOOK - Vertical Layout */
         .second-book {
             background: #0a0a0a;
-            padding: 80px 5% 90px;
+            padding: 70px 5% 90px;
             border-top: 1px solid #222;
         }
        
-        .second-book-container {
-            max-width: 1100px;
+        .second-container {
+            max-width: 620px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 390px 1fr;
-            gap: 70px;
-            align-items: center;
         }
        
-        .second-cover-wrapper {
-            justify-self: center;
-        }
-       
-        .second-cover {
+        .second-cover-small {
             width: 100%;
-            max-width: 390px;           /* ~75% of the first cover */
+            max-width: 380px;
             height: auto;
             border: 10px solid #111;
             box-shadow: 0 25px 50px -15px rgba(0,0,0,0.85);
-            border-radius: 4px;
+            display: block;
+            margin-bottom: 40px;
         }
        
-        .second-content {
+        .second-text-block {
             max-width: 560px;
         }
        
         .second-title {
             font-family: 'Playfair Display', serif;
-            font-size: 2.35rem;
+            font-size: 2.25rem;
             font-weight: 700;
             letter-spacing: -1.5px;
-            line-height: 1.1;
-            margin-bottom: 12px;
+            line-height: 1.15;
+            margin-bottom: 10px;
         }
        
         .second-subtitle {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             font-weight: 500;
             opacity: 0.85;
-            margin-bottom: 28px;
+            margin-bottom: 26px;
         }
        
         .second-teaser {
-            font-size: 1.05rem;
-            max-width: 480px;
+            font-size: 1.02rem;
             opacity: 0.9;
-            margin-bottom: 38px;
+            margin-bottom: 34px;
             line-height: 1.65;
         }
        
         .second-btn {
-            font-size: 1.15rem;
-            padding: 18px 42px;
-            background: #ffffff;
-            color: #000000;
+            font-size: 1.1rem;
+            padding: 17px 38px;
         }
        
         .footer {
@@ -185,22 +175,7 @@
                 padding: 40px 5%;
             }
             .cover { max-width: 340px; }
-            
-            .second-book-container {
-                grid-template-columns: 1fr;
-                gap: 50px;
-                text-align: center;
-            }
-            .second-cover {
-                max-width: 320px;
-            }
-            .second-content {
-                max-width: 100%;
-            }
-            .second-teaser {
-                margin-left: auto;
-                margin-right: auto;
-            }
+            .second-cover-small { max-width: 320px; }
         }
     </style>
 </head>
@@ -231,25 +206,21 @@
         </div>
     </section>
     
-    <!-- SECOND BOOK SECTION -->
+    <!-- SECOND BOOK - Smaller image on left, text below -->
     <section class="second-book">
-        <div class="second-book-container">
+        <div class="second-container">
             
-            <!-- Left: Smaller Cover (75% size) -->
-            <div class="second-cover-wrapper">
-                <img src="further-derivations-cover.jpg" 
-                     alt="Storm Theory: Further Derivations Book Cover" 
-                     class="second-cover">
-            </div>
+            <img src="further-derivations-cover.jpg" 
+                 alt="Storm Theory: Further Derivations Book Cover" 
+                 class="second-cover-small">
             
-            <!-- Right: Text + Button -->
-            <div class="second-content">
-                <h2 class="second-title">Storm Theory: σ,<br>Further Derivations</h2>
+            <div class="second-text-block">
+                <h2 class="second-title">Storm Theory: σ, Further Derivations</h2>
                 <p class="second-subtitle">Coherence-Based Gravitation and Emergent Geometry</p>
                 
                 <div class="second-teaser">
-                    The complete mathematical bridge from ontology to observable physics.<br><br>
-                    Derives the σ-dependent metric, coherence-gradient force law, soft-core black hole interiors, modified ringdown signatures, coherence-dependent cosmology, and the first steps toward quantizing the coherence field — all from the same two primitives.
+                    The complete mathematical bridge from ontology to observable physics.<br>
+                    Derives the σ-dependent metric, soft-core black holes, coherence-gradient force law, modified ringdown, and the full Einstein-to-Storm reduction.
                 </div>
                 
                 <a href="Storm-Theory-Further-Derivations.pdf" class="download-btn second-btn" download>
